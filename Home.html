@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agriculture AI App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background-color: #f4fdf6;
+      color: #2e7d32;
+    }
+
+    header {
+      background-color: #e8f5e9;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1531966660849-768d8b5d06af?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 8rem 2rem;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .btn {
+      background-color: #4caf50;
+      padding: 0.75rem 1.5rem;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .features-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .feature-image {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+      transition: transform 0.4s ease;
+    }
+
+    .feature-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .feature-text {
+      flex: 1;
+      min-width: 280px;
+      transition: transform 0.4s ease;
+    }
+
+    .feature-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-text a {
+      display: inline-block;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .feature-text a:hover {
+      background-color: #388e3c;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+
+
+    .feature-box {
+      flex: 1;
+      min-width: 250px;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .download {
+      background-color: #c8e6c9;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><strong>Agriculture AI</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Download</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="content">
+      <h1>Empowering Agriculture with AI</h1>
+      <p>Revolutionize your field with our smart farming assistant</p>
+      <button class="btn" onclick="window.location='#download'">Download App</button>
+    </div>
+  </section>
+
+
+  <section style="padding: 4rem 2rem; background: #ffffff;">
+    <div style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    ">
+      <!-- Left Image -->
+      <img src="https://plantix.net/en/assets/images/hero-farmer-cut-international.png"
+          alt="Farmer"
+          style="max-width: 500px; border-radius: 16px;" />
+
+      <!-- Center Floating Phone -->
+      <img src="phone.png"
+          alt="Phone Screen"
+          style="max-width: 280px; position: absolute; transform: translateY(-20px); z-index: 2;" />
+
+
+      <!-- Right Image -->
+      <img src="https://plantix.net/en/assets/images/hero-phone-en.png"
+          alt="App Diagnosis"
+          style="max-width: 300px; border-radius: 16px;" />
+    </div>
+
+    <!-- Description -->
+    <div style="max-width: 700px; margin: 3rem auto 0 auto; text-align: center;">
+      <p style="font-size: 1.2rem; color: #444; line-height: 1.8;">
+        Our app helps farmers diagnose and treat crop problems,<br />
+        improve productivity, and provide expert farming knowledge.<br />
+        Achieve your agricultural goals with smart AI assistance.
+      </p>
+      <p style="font-size: 0.9rem; color: #888; margin-top: 1rem;">
+        Trusted by thousands in the global farming households.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="features-section">
+    <h2>Core Features</h2>
+    <div class="features">
+      <div class="feature-row">
+        <div class="feature-image">
+          <img src="https://plantix.net/en/assets/video/farmer-app-screen-1-poster.png" alt="Detect Crops">
+        </div>
+        <div class="feature-text">
+          <h3>Detect Crop Issues Instantly</h3>
+          <p>Take a picture of your crop and receive instant, offline diagnosis powered by AI. Fast, reliable, and easy to use.</p>
+          <a href="#">Try the Diagnosis Tool</a>
+        </div>
+      </div>
+
+      <div class="feature-row reverse">
+        <div class="feature-image">
+          <img src="https://plantix.net/en/assets/video/farmer-app-screen-3-poster.png" alt="Get Advice">
+        </div>
+        <div class="feature-text">
+          <h3>Expert-backed Recommendations</h3>
+          <p>Access community-sourced knowledge and expert suggestions to guide your farming practices more effectively.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-image">
+          <img src="https://plantix.net/en/assets/video/farmer-app-screen-4-poster.png" alt="Yield Boost">
+        </div>
+        <div class="feature-text">
+          <h3>Boost Crop Yield</h3>
+          <p>Use our disease library and treatment database to safeguard your harvests and maximize productivity.</p>
+          <a href="#">View Library</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <section class="section download" id="download">
+    <h2>Get the App Now</h2>
+    <p>Available on Android and iOS</p>
+    <button class="btn" onclick="window.open('https://example.com/app-download')">Download</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Agriculture AI Inc. All rights reserved.
+  </footer>
+</body>
+</html>
