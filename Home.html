@@ -19,6 +19,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -42,13 +45,13 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(22, 29, 23, 0.493);
     }
 
     .hero .content {
       position: relative;
       z-index: 2;
-    }
+    } 
 
     .hero h1 {
       font-size: 3rem;
@@ -113,7 +116,7 @@
     }
 
     .feature-image:hover img {
-      transform: scale(1.05);
+      transform: scale(1.10);
     }
 
     .feature-text {
@@ -193,9 +196,9 @@
     <div class="logo"><strong>Agriculture AI</strong></div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Features</a>
-      <a href="#">Download</a>
-      <a href="#">Contact</a>
+      <a href="Features.html">Features</a>
+      <a href="Download.html">Download</a>
+      <a href="Contact.html">Contact</a>
     </nav>
   </header>
 
@@ -217,6 +220,7 @@
       flex-wrap: wrap;
       max-width: 1200px;
       margin: auto;
+      position: relative;
     ">
       <!-- Left Image -->
       <img src="https://plantix.net/en/assets/images/hero-farmer-cut-international.png"
@@ -263,7 +267,7 @@
         <div class="feature-text">
           <h3>Detect Crop Issues Instantly</h3>
           <p>Take a picture of your crop and receive instant, offline diagnosis powered by AI. Fast, reliable, and easy to use.</p>
-          <a href="#">Try the Diagnosis Tool</a>
+          <a href="Download.html">Try the Diagnosis Tool</a>
         </div>
       </div>
 
@@ -274,7 +278,7 @@
         <div class="feature-text">
           <h3>Expert-backed Recommendations</h3>
           <p>Access community-sourced knowledge and expert suggestions to guide your farming practices more effectively.</p>
-          <a href="#">Learn More</a>
+          <a href="Download.html">Learn More</a>
         </div>
       </div>
 
@@ -285,7 +289,7 @@
         <div class="feature-text">
           <h3>Boost Crop Yield</h3>
           <p>Use our disease library and treatment database to safeguard your harvests and maximize productivity.</p>
-          <a href="#">View Library</a>
+          <a href="Download.html">View Library</a>
         </div>
       </div>
     </div>
@@ -297,7 +301,10 @@
   <section class="section download" id="download">
     <h2>Get the App Now</h2>
     <p>Available on Android and iOS</p>
-    <button class="btn" onclick="window.open('https://example.com/app-download')">Download</button>
+    <div class="feature-text">
+      <a href="Download.html">DOWNLOAD</a>
+    </div>
+    <!-- <button class="btn" onclick="window.open('https://example.com/app-download')">Download</button> -->
   </section>
 
   <footer>
