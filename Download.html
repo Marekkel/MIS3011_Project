@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download - Agriculture AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      background-color: #f4fdf6;
+      color: #2e7d32;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #e8f5e9;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .download-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .download-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .download-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .download-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .download-buttons a {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .download-buttons a:hover {
+      background-color: #388e3c;
+    }
+
+    .download-buttons img {
+      height: 24px;
+      margin-right: 0.75rem;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .download-section h1 {
+        font-size: 2rem;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <header>
+    <div class="logo">Agriculture AI</div>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Features.html">Features</a>
+      <a href="#">Download</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 下载内容 -->
+  <section class="download-section">
+    <h1>Download the App</h1>
+    <p>Get started with smart farming today</p>
+    <p><small>(Please wait for the App to be launched on the plantform)</small></p>
+    <div class="download-buttons">
+      <a href="https://play.google.com/store/apps/details?id=your_app_id" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+        Android
+      </a>
+      <a href="https://apps.apple.com/app/idyour_app_id" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Store" />
+        iOS
+      </a>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 Agriculture AI Inc. All rights reserved.</footer>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Features - Agriculture AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background-color: #f4fdf6;
+      color: #2e7d32;
+    }
+
+    header {
+      background-color: #e8f5e9;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .carousel-container {
+      overflow-x: auto;
+      display: flex;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1.5rem;
+      padding: 1rem 0 2rem;
+      scroll-behavior: smooth;
+    }
+
+    .feature-card {
+      scroll-snap-align: center;
+      flex: 0 0 90%;
+      max-width: 700px;
+      margin: auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .feature-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 0.4rem 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .arrow-left {
+      left: -10px;
+    }
+
+    .arrow-right {
+      right: -10px;
+    }
+
+    @media (min-width: 768px) {
+      .feature-card {
+        flex: 0 0 600px;
+      }
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Agriculture AI</div>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="#">Features</a>
+    <a href="Download.html">Download</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>AI-Powered Features</h2>
+  <div class="carousel-wrapper">
+    <button class="arrow-btn arrow-left" onclick="scrollCarousel(-1)">&#8592;</button>
+    <div class="carousel-container" id="carousel">
+      <!-- Card 1 -->
+      <div class="feature-card">
+        <img src="https://plantix.net/en/assets/video/farmer-app-screen-1-poster.png" alt="Crop Detection">
+        <h3>🌿 Instant Crop Issue Detection</h3>
+        <p>
+          Our AI identifies diseases and pest issues by analyzing photos of your crops in real time, even offline.
+        </p>
+        <p>
+          Trained on thousands of labeled samples, it compares visual symptoms against a global crop health database.
+          Get reliable, fast diagnosis and act before the problem spreads.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card">
+        <img src="https://plantix.net/en/assets/video/farmer-app-screen-3-poster.png" alt="Expert Advice">
+        <h3>📚 Expert-backed Recommendations</h3>
+        <p>
+          Receive AI-curated farming tips based on your diagnosis. Our system blends scientific research with real farmer feedback.
+        </p>
+        <p>
+          Personalized suggestions improve decision-making, while filters help you avoid outdated or ineffective solutions.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card">
+        <img src="https://plantix.net/en/assets/video/farmer-app-screen-4-poster.png" alt="Boost Yield">
+        <h3>🚜 Boost Crop Yield</h3>
+        <p>
+          Let AI optimize your productivity by predicting disease cycles, recommending treatment times, and analyzing weather data.
+        </p>
+        <p>
+          Seasonal guidance and historical tracking ensure every harvest is better than the last.
+        </p>
+      </div>
+    </div>
+    <button class="arrow-btn arrow-right" onclick="scrollCarousel(1)">&#8594;</button>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Agriculture AI Inc. All rights reserved.
+</footer>
+
+<script>
+  function scrollCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    const scrollAmount = carousel.offsetWidth * 0.9;
+    carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
